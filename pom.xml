@@ -8,7 +8,7 @@
     
     <name>Morphi Projection</name>
     <description>Annotation to project mongo entity</description>
-    <url>http://maven.apache.org</url>
+    <url>https://github.com/ronoel/morphiaprojection</url>
     
     <licenses>
         <license>
