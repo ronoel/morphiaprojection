@@ -15,7 +15,7 @@ public class Foo {
     @ProjectView(name = "View1")
     private String name;
     
-    private int age;
+    private Integer age;
     ...
 }
 ```
@@ -30,4 +30,13 @@ Use the query to project the data to recovery from MongoDB
     // this query will project only the fields with @ProjectView and name that contains "View1"
     ...
     // execute the query
+```
+
+Will be recovered from the database only the fields that has the annotation *@ProjectView(name = "View1")*.
+Projecting the *"View1"* will recovery the following data:
+```java
+    ...
+    System.out.println(foo.getId()!=null);  // return true;
+    System.out.println(foo.getName()!=null);  // return true;
+    System.out.println(foo.getAge()!=null);  // return false;
 ```
